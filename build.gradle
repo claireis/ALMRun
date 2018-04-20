@@ -31,7 +31,7 @@ jar {
 
 task copy(type: Copy) {
     from 'build/libs'
-    into 'E:/Program Files/ALMRun/config/'
+    into 'E:/fake/ALMRun/config/'
 }
 
 
