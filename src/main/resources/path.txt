@@ -1,0 +1,5 @@
+everything E:/Program Files/Everything/Everything.exe
+
+reboot E:/Program Files/AutoHotkey/Scripts/reboot.ahk
+
+calc

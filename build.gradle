@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'java-library'
+
+group 'tk.carlyle2k'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/central' }
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    compile 'com.google.guava:guava:22.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = 'tk.carlyle2k.ALM'
+
+jar {
+    manifest {
+        attributes ('Implementation-Title': project.name,
+                'Main-Class': project.mainClassName)
+    }
+}
+
+task copy(type: Copy) {
+    from 'build/libs'
+    into 'E:/Program Files/ALMRun/config/'
+}
+
+
+
